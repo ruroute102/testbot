@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import logging
 import telebot
-from bot_tg import config
+import config
 # from telebot import apihelper
 
 # PROXY = 'https://200.69.70.133:9991'
@@ -56,7 +56,7 @@ def forward_handler(message):
             bot.forward_message(config.CHAT, message.chat.id, message.message.id)
     except Exception as error:
         print('Exception in forward handler. Info: ()'.format(error))
-
+# pyTelegramBotAPI (3.6.7)
 
 """
 В обработчик передадим функцию, которая всегда возвращает True 
